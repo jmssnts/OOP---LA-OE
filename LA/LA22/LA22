@@ -1,0 +1,24 @@
+#LA22
+class Bday:
+    def __init__(self, theme, foods, special_dish):
+        self.theme = theme
+        self.foods = foods
+        self.special_dish = special_dish
+        
+    def print_foods(self):
+        print(f"Party Theme: {self.theme}")
+        print(f"Foods:")
+        print(f"{self.foods['main']}")
+        print(f"{self.foods['dessert']}")
+        print(f"{self.foods['snack']}")
+        print(f"Special Dish: {self.special_dish}")
+    
+    def _print_secret_dish(self):
+        print(f"Secret Dish: {self.special_dish}")
+        
+theme1 = Bday("Bday", {"main": "Pancit", "dessert": "Buko-Pandan", "snack": "Marshmallow-Hotdog"}, "Fried Chicken")
+theme2 = Bday("Samg", {"main": "Pork", "dessert": "Melona", "snack": "Buttered Potato"}, "Fishcake")
+theme3 = Bday("Street Foods", {"main": "Fishball", "dessert": "Palamig", "snack": "Kwek-Kwek"}, "Squidballs")
+theme1.print_foods()
+theme2.print_foods()
+theme3.print_foods()
