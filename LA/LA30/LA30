@@ -1,0 +1,33 @@
+#LA30
+
+import tkinker as tk
+
+
+
+windows = tk.Tk()
+
+windows.title("")
+
+windows.geometry("800x600")
+
+windows.configure(bg="green")
+
+
+
+pangalan = tk.Entry(windows)
+
+pangalan.grid(row=1, column=0)
+
+
+
+def printmo():
+
+    print(pangalan.get())
+
+button = tk.Button(windows, text="JAMES", command=printmo)    
+
+button.grid(row=1, clumn=1, pady=20, padx=20)
+
+
+
+windows.mainlop()
