@@ -1,0 +1,17 @@
+#LA18
+class FavoriteFood:
+    def __init__(self, name, ingredients):
+        self.name = name
+        self.ingredients = ingredients
+
+    def __str__(self):
+        ingredients_list = ", ".join(self.ingredients)
+        return f"{self.name}: A delicious dish made with {ingredients_list}."
+
+food1 = FavoriteFood("Adobo", ["chicken or pork", "soy sauce", "vinegar", "garlic", "onion", "sugar"])
+food2 = FavoriteFood("Sinigang", ["pork", "tomatoes", "spinach", "carrots", "potatoes", "onions"])
+food3 = FavoriteFood("Lechon", ["whole pig", "salt", "pepper", "garlic", "onion"])
+
+print(food1)
+print(food2)
+print(food3)
