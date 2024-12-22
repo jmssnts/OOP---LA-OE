@@ -1,0 +1,109 @@
+#OE4  
+
+class SocialMediaUser:
+
+    def __init__(self, username, password):
+
+        self.username = username
+
+        self.password = password
+
+        self.logged_in = False
+
+    
+
+    def login(self):
+
+        # Simulate login logic (e.g., check credentials)
+
+        self.logged_in = True
+
+        print(f"Logged in as {self.username}")
+
+    
+
+    def post(self, content):
+
+        if self.logged_in:
+
+            print(f"{self.username} posted: {content}")
+
+        else:
+
+            print("Please login to post.")
+
+    
+
+class Influencer(SocialMediaUser):
+
+    def __init__(self, username, password, followers):
+
+        super().__init__(username, password)
+
+        self.followers = followers
+
+    
+
+    def share_story(self):
+
+        if self.logged_in:
+
+            print(f"{self.username} shared a story with {self.followers} followers.")
+
+        else:
+
+            print("Please login to share a story.")
+
+    
+
+class TwitterUser(SocialMediaUser):
+
+    def __init__(self, username, password, num_tweets):
+
+        super().__init__(username, password)
+
+        self.num_tweets = num_tweets
+
+    
+
+    def tweet(self, message):
+
+        if self.logged_in:
+
+            print(f"{self.username} tweeted: {message}")
+
+        else:
+
+            print("Please login to tweet.")
+
+
+
+if __name__ == "__main__":
+
+  
+
+    user1 = SocialMediaUser("user1", "password123")
+
+    influencer1 = Influencer("influencer1", "securepwd", 1000)
+
+    twitter_user1 = TwitterUser("twitter_user1", "mytwitterpwd", 500)
+
+
+
+  
+
+    user1.login()
+
+    user1.post("Hello, this is my first post!")
+
+
+
+    influencer1.login()
+
+    influencer1.share_story()
+
+
+
+    twitter_user1.login()
+
+    twitter_user1.tweet("Tweeting from Python program!")        
