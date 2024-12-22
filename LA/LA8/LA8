@@ -1,0 +1,13 @@
+#LA 8
+
+class book:
+    def __init__(self, title,author):
+        self.title = title
+        self.author = author
+        
+x = book("Eat A Taki Moss", "Keshi")
+y = book("Gomenasai","Patawad")
+print(f"{x.title}, {x.author}")
+del x.author
+#print(f"{x.title}, {x.author}")
+print(f"{y.title}, {y.author}")
