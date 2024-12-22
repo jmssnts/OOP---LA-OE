@@ -1,0 +1,29 @@
+#LA19
+class FavoriteFood:
+    def __init__(self, name, public_ingredients, secret_ingredients):
+        self.name = name
+        self.public_ingredients = public_ingredients
+        self.__secret_ingredients = secret_ingredients
+
+    def __str__(self):
+        ingredients_list = ", ".join(self.public_ingredients)
+        return f"{self.name}: A delicious dish made with {ingredients_list}."
+
+    def reveal_secret_ingredients(self):
+        return ", ".join(self.__secret_ingredients)
+
+food1 = FavoriteFood("Adobo", ["chicken or pork", "soy sauce", "vinegar"], ["brown sugar", "onion"])
+food2 = FavoriteFood("Sinigang", ["pork", "tomatoes", "spinach"], ["lemon juice", "fish sauce"])
+food3 = FavoriteFood("Lechon", ["whole pig", "salt", "pepper"], ["garlic butter", "onion"])
+
+print(food1)
+print("Trying to access secret ingredients directly:")
+try:
+    print(food1.__secret_ingredients)
+except AttributeError as e:
+    print(e)
+
+print("\nRevealing secret ingredients using a method:")
+print(food1.reveal_secret_ingredients())
+print(food2.reveal_secret_ingredients())
+print(food3.reveal_secret_ingredients())
