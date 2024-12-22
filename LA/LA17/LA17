@@ -1,0 +1,36 @@
+#LA 17
+
+class Player:
+    def __init__(self, name, hp, attack_power):
+        self.name = name
+        self.hp = hp
+        self.attack_power = attack_power
+        
+    def attack(self, target):
+        target.hp -= self.attack_power
+        print(f"{self.name} attacks {target.name}")
+        print(f"{target.name}'s remaining health: {target.hp}")
+        
+    def heal(self, amount):
+        self.hp += amount
+        print(f"{self.name} heals for {amount} points!")
+        print(f"{self.name}'s health is now {self.hp}")
+        
+laika = Player("Knight", 100, 20)
+beth = Player("Reaper", 80, 25)
+
+while laika.hp > 0 and beth.hp > 0:
+    laika.attack(beth)
+    if beth.hp <= 0:
+        print(f"{beth.name} has been defeated!")
+        break
+    
+    beth.attack(laika)
+    if laika.hp <= 0:
+        print(f"{laika.name} has been defeated!")
+        break
+    
+    if laika.hp < 50:
+        laika.heal(15)
+    if beth.hp < 50:
+        beth.heal(10)
