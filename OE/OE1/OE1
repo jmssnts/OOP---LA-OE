@@ -1,0 +1,106 @@
+#OE1
+class hero():
+
+    def __init__(self,name,role,dmg_type,health,auto_atc_dmg):
+
+        self.name = name
+
+        self.role = role
+
+        self.dmg_type = dmg_type
+
+        self.health = health
+
+        self.auto_atc_dmg = auto_atc_dmg
+
+
+
+    def describe(self):
+
+        return f"{self.name} is a {self.role} with a {self.dmg_type} power having {self.health}% maximum health that can deal {self.auto_atc_dmg}% basic attack damage."
+
+        
+
+hero_mm1 = hero("Miya","marksman","physical attack damage",70,100)
+
+hero_fighter1 = hero("Zilong","fighter","physical attack damage",75,150)
+
+hero_mage1 = hero("Eudora","mage","magical attack damage",50,10)
+
+hero_tank1 = hero("Tigreal","tank","physical attack damage",100,10)
+
+hero_support1 = hero("Rafaela","support","magical attack power",75,10)
+
+
+
+print(f'''
+
+{hero_mm1.name}
+
+{hero_mm1.role}
+
+{hero_mm1.dmg_type}
+
+{hero_mm1.health}
+
+{hero_mm1.auto_atc_dmg}
+
+{hero_mm1.describe()}
+
+
+
+{hero_fighter1.name}
+
+{hero_fighter1.role}
+
+{hero_fighter1.dmg_type}
+
+{hero_fighter1.health}
+
+{hero_fighter1.auto_atc_dmg}
+
+{hero_fighter1.describe()}
+
+
+
+{hero_mage1.name}
+
+{hero_mage1.role}
+
+{hero_mage1.dmg_type}
+
+{hero_mage1.health}
+
+{hero_mage1.auto_atc_dmg}
+
+{hero_mage1.describe()}
+
+
+
+{hero_tank1.name}
+
+{hero_tank1.role}
+
+{hero_tank1.dmg_type}
+
+{hero_tank1.health}
+
+{hero_tank1.auto_atc_dmg}
+
+{hero_tank1.describe()}
+
+
+
+{hero_support1.name}
+
+{hero_support1.role}
+
+{hero_support1.dmg_type}
+
+{hero_support1.health}
+
+{hero_support1.auto_atc_dmg}
+
+{hero_support1.describe()}
+
+''')
