@@ -3,7 +3,7 @@
 import tkinter as tk
 
 root = tk.Tk()
-name = "Daniel_Delos_Reyes"
+name = "James_Canete"
 section = "BSIT-2A"
 root.title("OOP")
 root.geometry("300x200")
